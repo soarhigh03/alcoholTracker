@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>딸꾹 — 알콜 트래커</title>
+  <meta name="description" content="요즘 새내기들의 알콜 트래커, 딸꾹. 재미있게, 건강하게 마시자!" />
+  <!-- Tailwind CSS (CDN for quick start) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Mobile-first canvas; black gutters on wide screens */
+    html, body { height: 100%; background:#000; }
+    .section { min-height: 100svh; }
+    /* Subtle grain for vibe */
+    .grain::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.08; mix-blend:multiply; background-image:url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.4"/></svg>'); background-size:300px 300px; }
+    /* Enter animations */
+    .reveal { opacity:0; transform:translateY(12px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity:1; transform:translateY(0); }
+  </style>
+</head>
+<body class="text-white">
+  <!-- Frame container (mobile width); side space stays black on desktop -->
+  <div class="mx-auto w-full max-w-md md:max-w-lg lg:max-w-xl">
+
+    <!-- Hero / First click screen -->
+    <section id="hero" class="section relative overflow-hidden grain">
+      <div aria-hidden class="absolute inset-0">
+        <img src="assets/images/page1.png" alt="" class="w-full h-full object-cover object-left-top" />
+      </div>
+      <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-5">
+        <!-- Logo overlay (replace with your SVG/PNG) -->
+        
+
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section id="countdown" class="py-16 bg-black">
+      <div class="px-6">
+        <div class="space-y-32 text-center">
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none">10</div>
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none ml-48">9</div>
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none ml-16">8</div>
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none ml-64">7</div>
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none ml-24">6</div>
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none ml-52">5</div>
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none ml-8">4</div>
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none ml-40">3</div>
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none ml-20">2</div>
+          <div class="reveal font-mono text-5xl sm:text-6xl tracking-tight select-none ml-56">1</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- New Year message -->
+    <section id="newyear" class="section flex items-center bg-gradient-to-b from-black to-zinc-900">
+      <div class="px-6 w-full">
+        <p class="text-2xl font-semibold mb-6 reveal">1월 1일,</p>
+        <p class="text-xl leading-8 mb-3 reveal">이제 진짜 어른이 될 당신을 위해,</p>
+        <p class="text-xl leading-8 mb-8 reveal">갓스물, 새해 첫 음주는 딸꾹과 함께해보세요!</p>
+        <p class="text-lg leading-7 reveal">알딸딸~할 때 <span class="font-bold">꾹!</span> 기록하기</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="relative py-16 bg-zinc-950/70">
+      <div class="px-6 space-y-14">
+        <!-- Feature 1 -->
+        <div class="reveal">
+          <h3 class="text-xl font-bold">1. 나만의 알코올 메이트</h3>
+          <p class="mt-2 text-zinc-300">“술 마실수록 변하는 내 캐릭터… 궁금하지 않아?”</p>
+          <p class="mt-1 text-zinc-300">점점 취해가는 나를 귀여운 캐릭터로 만나 보세요. 음주량이 늘어날수록 캐릭터의 표정이 변하고, 과음한 날은 캐릭터가 토를 해요…🤮 음주량에 따른 숙취와 주사까지 반영한 나만의 알코올 메이트 사쿠를 친구들에게 공유해 보세요!</p>
+          <p class="mt-1 text-zinc-300">+) “왜 나 빼고 다 멀쩡해? 아니 사실 우리도 취했어…” 친구들의 귀여운 음주 캐릭터 훔쳐보기! 친구 탭에서 내가 추가한 사람들의 실시간 상태를 확인할 수 있어요.</p>
+          <div class="mt-4 aspect-[16/9] w-full rounded-2xl bg-zinc-800/60 border border-white/5 flex items-center justify-center text-sm text-white/60">에셋 자리: 스트릭, 레포트, 사쿠 버전들</div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="reveal">
+          <h3 class="text-xl font-bold">2. MZ한 술모임 기록</h3>
+          <p class="mt-2 text-zinc-300">“뻔한 짠메랑 NO! 딸꾹으로 힙하게 연결되는 우리”</p>
+          <p class="mt-1 text-zinc-300">모임의 이름, 참여한 친구들의 음주 캐릭터를 추가하고, 그날의 분위기를 한 문장으로 남겨 보세요. 그룹 친구들의 캐릭터가 담긴 힙한 스토리 포스트를 공유하세요!</p>
+          <p class="mt-1 text-zinc-300">간단한 음주/금주 레포트를 인스타 스토리로 공유할 수 있어요.</p>
+          <div class="mt-4 grid grid-cols-3 gap-3">
+            <div class="aspect-[9/16] rounded-xl bg-zinc-800/60 border border-white/5"></div>
+            <div class="aspect-[9/16] rounded-xl bg-zinc-800/60 border border-white/5"></div>
+            <div class="aspect-[9/16] rounded-xl bg-zinc-800/60 border border-white/5"></div>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="reveal">
+          <h3 class="text-xl font-bold">3. 음주 습관 기록</h3>
+          <p class="mt-2 text-zinc-300">“음주/금주 목표 달성을 위한 주량 레포트까지!”</p>
+          <p class="mt-1 text-zinc-300">“나의 주량은 몇 병일까?”, “어느 술에 취약할까?” 궁금하셨다고요? 앱에 기록된 데이터를 바탕으로 당신의 음주 습관을 낱낱이 분석해 드릴게요.</p>
+          <p class="mt-1 text-zinc-300">평균 주량, 가장 많이 마신 요일, 나에게 맞는 술 등 맞춤형 음주 레포트로 술자리의 주도권을 꽉 잡으세요!</p>
+          <div class="mt-4 aspect-[16/9] w-full rounded-2xl bg-zinc-800/60 border border-white/5 flex items-center justify-center text-sm text-white/60">에셋 자리: 차트/리포트 샷</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Email form -->
+    <section id="signup" class="py-16 bg-black">
+      <div class="px-6">
+        <h4 class="text-xl font-semibold">런칭 알림 받기</h4>
+        <p class="mt-1 text-zinc-400">이메일을 남기면 출시 소식을 가장 먼저 알려드려요.</p>
+        <form id="emailForm" class="mt-5 grid grid-cols-1 gap-3" method="POST" action="https://formspree.io/f/your_form_id">
+          <input type="email" required name="email" placeholder="you@example.com" class="w-full rounded-xl bg-zinc-900 border border-white/10 px-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-white/20" />
+          <textarea name="message" placeholder="하고 싶은 말 (선택)" class="w-full rounded-xl bg-zinc-900 border border-white/10 px-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-white/20" rows="3"></textarea>
+          <button class="rounded-xl bg-white text-black font-medium px-5 py-3 hover:bg-white/90">보내기</button>
+          <p id="formMsg" class="text-sm text-emerald-400 hidden">전송되었습니다! 감사합니다 💌</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="py-10 text-center text-xs text-white/50">© <span id="yr"></span> 딸꾹</footer>
+  </div>
+
+  <script>
+    const enterBtn = document.getElementById('enterBtn');
+
+    // Scroll to the countdown on click / Enter key
+    function goToCountdown(){
+      document.getElementById('count-10')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    enterBtn?.addEventListener('click', goToCountdown);
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Enter') goToCountdown(); });
+
+    // Reveal-on-scroll for feature text blocks
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach((e)=>{
+        if(e.isIntersecting){
+          e.target.classList.add('show');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Simple Formspree AJAX (success message only)
+    const form = document.getElementById('emailForm');
+    const msg = document.getElementById('formMsg');
+    form?.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const data = new FormData(form);
+      try{
+        const res = await fetch(form.action, { method:'POST', body: data, headers: { 'Accept':'application/json' } });
+        if(res.ok){
+          msg.classList.remove('hidden');
+          form.reset();
+        } else {
+          alert('전송에 실패했습니다. 나중에 다시 시도해주세요.');
+        }
+      } catch(err){
+        alert('네트워크 오류가 발생했습니다.');
+      }
+    });
+
+    // Footer year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
